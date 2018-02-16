@@ -16,7 +16,7 @@ module Fastlane
         
         endpoint = 'https://api.instabug.com/api/ios/v1/dsym'
         
-        command =  "curl #{endpoint} --write-out %{http_code} --silent --output /dev/null -F dsym=@\"#{dsym_zip_path}\" -F token=\"#{api_token}\""
+        command =  "curl #{endpoint} --write-out %{http_code} --silent --output /dev/null -F dsym=@#{dsym_zip_path} -F token=\"#{api_token}\""
         
         UI.verbose command
         
